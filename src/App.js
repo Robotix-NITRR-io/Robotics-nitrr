@@ -4,10 +4,10 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import Home from './pages';
-import About from './pages/about';
-import Blogs from './pages/blogs';
+import ProjectList from './pages/ProjectList';
+import ProjectDetails from './pages/ProjectDetails';
 import SignUp from './pages/signup';
-import Contact from './pages/contact';
+import AddProject from './pages/AddProject';
   
 function App() {
 return (
@@ -15,9 +15,9 @@ return (
     <Navbar />
     <Routes>
         <Route  path='/'  element={<Home />} />
-        <Route path='/about' element={<About/>} />
-        <Route path='/contact' element={<Contact/>} />
-        <Route path='/blogs' element={<Blogs/>} />
+        <Route path='/ProjectList' element={<ProjectList/>} />
+        <Route path='/ProjectDetails' element={<ProjectDetails/>} />
+        <Route path='/AddProject' element={<AddProject/>} />
         <Route path='/sign-up' element={<SignUp/>} />
     </Routes>
     </Router>

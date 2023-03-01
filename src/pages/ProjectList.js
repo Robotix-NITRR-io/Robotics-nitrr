@@ -1,13 +1,13 @@
 import React from "react";
   
-const About = () => {
+const ProjectList = () => {
   return (
     <div>
       <h1>
-    about
+    ProjectList
       </h1>
     </div>
   );
 };
   
-export default About;
+export default ProjectList;
