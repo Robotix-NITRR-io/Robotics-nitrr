@@ -9,7 +9,8 @@ const ProjectList = () => {
           .then((response) => response.json())
           .then((data) => setUser(data));
   }
-
+//https://jsonplaceholder.typicode.com/users
+//http://localhost:8080/users
   useEffect(() => {
     fetchData();
   },[])
