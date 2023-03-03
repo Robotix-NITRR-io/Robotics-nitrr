@@ -6,8 +6,9 @@ import { BrowserRouter as Router, Routes, Route}
 import Home from './pages';
 import ProjectList from './pages/ProjectList';
 import ProjectDetails from './pages/ProjectDetails';
-import SignUp from './pages/signup';
 import AddProject from './pages/AddProject';
+import SignUp from './pages/signup';
+
   
 function App() {
 return (
@@ -19,6 +20,7 @@ return (
         <Route path='/ProjectDetails' element={<ProjectDetails/>} />
         <Route path='/AddProject' element={<AddProject/>} />
         <Route path='/sign-up' element={<SignUp/>} />
+        
     </Routes>
     </Router>
 );
