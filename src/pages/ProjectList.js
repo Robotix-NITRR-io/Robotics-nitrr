@@ -1,6 +1,7 @@
 import React from "react";
 import  { useEffect, useState } from "react";
-  
+import Card from 'react-bootstrap/Card';
+import "./ProjectList.css";
 const ProjectList = () => {
   const [user, setUser] = useState([]);
 
@@ -23,13 +24,26 @@ const ProjectList = () => {
     </div>
     <main>
       <h1>User List</h1>
-      <ol > 
+      <ol  > 
         {user && user.length > 0 && user.map((userObj, index) => (
-            <li key={userObj.id}>{userObj.name}___{userObj.username}</li>
+            <li key={userObj.id}>
+             <Card className="card" style={{ width: '600px'  }}>
+             {userObj.name}
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title >{userObj.username}</Card.Title>
+        <Card.Text>
+        {userObj.company.catchPhrase}
+        </Card.Text>
+        
+      </Card.Body>
+    </Card></li>
            // <li key={userObj.id}>{userObj.username}</li>
+           
           ))}
       </ol>
     </main>
+   
     </>
   );
 };
