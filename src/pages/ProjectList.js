@@ -23,7 +23,7 @@ const ProjectList = () => {
     </div>
     <main>
       <h1>User List</h1>
-      <ol>
+      <ol > 
         {user && user.length > 0 && user.map((userObj, index) => (
             <li key={userObj.id}>{userObj.name}___{userObj.username}</li>
            // <li key={userObj.id}>{userObj.username}</li>
