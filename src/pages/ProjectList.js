@@ -2,6 +2,9 @@ import React from "react";
 import  { useEffect, useState } from "react";
 import Card from 'react-bootstrap/Card';
 import "./ProjectList.css";
+
+
+
 const ProjectList = () => {
   const [user, setUser] = useState([]);
 
@@ -9,6 +12,7 @@ const ProjectList = () => {
     return fetch("https://jsonplaceholder.typicode.com/users")
           .then((response) => response.json())
           .then((data) => setUser(data));
+          
   }
 //https://jsonplaceholder.typicode.com/users
 //http://localhost:8080/users
@@ -24,7 +28,7 @@ const ProjectList = () => {
     </div>
     <main>
       <h1>User List</h1>
-      <ol  > 
+      <ol> 
         {user && user.length > 0 && user.map((userObj, index) => (
             <li key={userObj.id}>
              <Card className="card" style={{ width: '600px'  }}>
