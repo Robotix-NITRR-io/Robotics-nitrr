@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import  { useEffect, useState } from "react";
 import Card from 'react-bootstrap/Card';
 import "./ProjectList.css";
@@ -34,7 +35,10 @@ const ProjectList = () => {
         {userObj.id}
           </NavLink> */}
       <Card className="card" style={{ width: '600px'  }}>
+             
+             <Link to={`/ProjectList/${userObj.id}`}>
              {userObj.name}
+             </Link>
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
         <Card.Title >{userObj.username}</Card.Title>
