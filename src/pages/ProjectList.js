@@ -31,9 +31,7 @@ const ProjectList = () => {
       <ol> 
         { user && user.length > 0 && user.map((userObj, index) => (
       <li key={userObj.id}>
-        {/* <NavLink to="/ProjectList" activeStyle>
-        {userObj.id}
-          </NavLink> */}
+      
       <Card className="card" style={{ width: '600px'  }}>
              
              <Link to={`/ProjectList/${userObj.id}`}>
@@ -48,7 +46,7 @@ const ProjectList = () => {
         
       </Card.Body>
     </Card></li>
-           // <li key={userObj.id}>{userObj.username}</li>
+          
            
           ))}
       </ol>

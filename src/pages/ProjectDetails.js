@@ -2,31 +2,34 @@ import React from 'react';
 import {useParams} from 'react-router-dom';
 import  { useEffect, useState } from "react";
 
-import axios from 'axios';
 
 
 
-const ProjectDetails = () => {
+
+const ProjectDetails = ({}) => {
   
   const params = useParams()
   const id = params.id
-  const URL = 'https://jsonplaceholder.typicode.com/users/1'
+ 
   
-  const [user, setUser] = useState(null);
-
-   axios.get(URL)
-   .then((response) =>{setUser(response.data)})
-
+  const [user, setUser] = useState([]);
+ 
+   
   
   useEffect(() => {
-    
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+          .then((response) => response.json())
+          .then((data) => setUser(data));
   },[])
 
 
   return (<>
     
     <h1>ProjectDetails of {id}</h1>
-    
+    <div>
+      <p>{user.name}</p>
+
+    </div>
      
           
            
