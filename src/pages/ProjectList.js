@@ -6,13 +6,12 @@ import "./ProjectList.css";
 
 
 const ProjectList = () => {
+  
   const [user, setUser] = useState([]);
-
   const fetchData = () => {
     return fetch("https://jsonplaceholder.typicode.com/users")
           .then((response) => response.json())
-          .then((data) => setUser(data));
-          
+          .then((data) => setUser(data));      
   }
 //https://jsonplaceholder.typicode.com/users
 //http://localhost:8080/users
@@ -29,9 +28,12 @@ const ProjectList = () => {
     <main>
       <h1>User List</h1>
       <ol> 
-        {user && user.length > 0 && user.map((userObj, index) => (
-            <li key={userObj.id}>
-             <Card className="card" style={{ width: '600px'  }}>
+        { user && user.length > 0 && user.map((userObj, index) => (
+      <li key={userObj.id}>
+        {/* <NavLink to="/ProjectList" activeStyle>
+        {userObj.id}
+          </NavLink> */}
+      <Card className="card" style={{ width: '600px'  }}>
              {userObj.name}
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
