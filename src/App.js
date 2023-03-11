@@ -8,6 +8,7 @@ import ProjectList from './pages/ProjectList';
 import ProjectDetails from './pages/ProjectDetails';
 import AddProject from './pages/AddProject';
 import SignUp from './pages/signup';
+import Editor from './pages/Editor';
 
   
 function App() {
@@ -21,6 +22,7 @@ return (
         <Route path='/ProjectDetails' element={<ProjectDetails/>} />
         <Route path='/AddProject' element={<AddProject/>} />
         <Route path='/sign-up' element={<SignUp/>} />
+        <Route path='/editor' element={<Editor/>} />
         
     </Routes>
     </Router>
