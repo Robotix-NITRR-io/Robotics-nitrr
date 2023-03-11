@@ -5,7 +5,7 @@ import JoditEditor from 'jodit-react'
 
 const RichEditor = ({setValue, config }) => {
     const editor = useRef(null);
-    return(<JoditEditor ref={editor} onChange = {(content) => setValue(content)} config={config}/>)
+    return(<JoditEditor ref={editor}  config={config}/>)
 }
 
 export default RichEditor;
