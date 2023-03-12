@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import  { useEffect, useState } from "react";
-import Card from 'react-bootstrap/Card';
 import "./ProjectList.css";
 
 
@@ -26,30 +25,24 @@ const ProjectList = () => {
     ProjectList
       </h1>
     </div>
-    <main>
-      <h1>User List</h1>
-      <ol> 
-        { user && user.length > 0 && user.map((userObj, index) => (
-      <li key={userObj.id}>
-      
-      <Card className="card" style={{ width: '600px'  }}>
-             
-             <Link to={`/ProjectList/${userObj.id}`}>
-             {userObj.name}
-             </Link>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title >{userObj.username}</Card.Title>
-        <Card.Text>
-        {userObj.company.catchPhrase}
-        </Card.Text>
-        
-      </Card.Body>
-    </Card></li>
-          
+
+    <main className="test">
+      <h1>User List</h1> 
+      <div className="project-continer">
+        {user && user.length > 0 && user.map((userObj, index) => (
+          // <div className="card" style={{ backgroundImage: `url(${})` }}></div>
+        <div className="card">
+          <div className="content">
+            <h2 className="title">{userObj.name}</h2>
+            <p className="copy">{userObj.company.catchPhrase}</p>
+          </div>
+        </div>
+
+           // <li key={userObj.id}>{userObj.username}</li>    
+
            
           ))}
-      </ol>
+      </div>
     </main>
    
     </>
