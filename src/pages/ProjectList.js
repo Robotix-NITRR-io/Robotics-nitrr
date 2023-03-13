@@ -21,17 +21,16 @@ const ProjectList = () => {
   },[])
   
   return (<>
-    <div>
-      <h1>
-    ProjectList
+      <img src="robotics_4.jpg" alt="1" className="img1"></img>
+      <h1 className="ProjectList" >
+    Explore Our New Projects
       </h1>
-    </div>
     <main>
-      <h1>User List</h1>
-      <ol> 
+      <h1 className="UserList">User List</h1>
+      <ol className="ol"> 
         {user && user.length > 0 && user.map((userObj, index) => (
             <li key={userObj.id}>
-             <Card className="card" style={{ width: '600px'  }}>
+             <Card className="card" style={{ width: '350px', height:'350px'  }}>
              {userObj.name}
       <Card.Img variant="top" src="holder.js/100px180" />
       <Card.Body>
