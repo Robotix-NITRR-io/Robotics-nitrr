@@ -115,6 +115,7 @@
 }
 
 .card {
+
   position: relative;
   display: -webkit-box;
   display: flex;

@@ -18,6 +18,7 @@ return (
     <Routes>
         <Route  path='/'  element={<Home />} />
         <Route path='/ProjectList' element={<ProjectList/>} />
+        <Route path='/ProjectDetails/:id' element={<ProjectDetails/>} />
         <Route path='/ProjectDetails' element={<ProjectDetails/>} />
         <Route path='/AddProject' element={<AddProject/>} />
         <Route path='/sign-up' element={<SignUp/>} />
