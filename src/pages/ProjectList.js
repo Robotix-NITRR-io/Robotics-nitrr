@@ -8,7 +8,6 @@ import img from "./img.jpg";
 
 
 const ProjectList = () => {
-  
   const [user, setUser] = useState([]);
   const fetchData = () => {
     return fetch("https://jsonplaceholder.typicode.com/users")
@@ -20,7 +19,6 @@ const ProjectList = () => {
   useEffect(() => {
     fetchData();
   },[])
-  
   return (<>
     <div>
       <h1>
