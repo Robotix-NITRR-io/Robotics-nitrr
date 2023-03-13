@@ -19,19 +19,16 @@ const ProjectList = () => {
     fetchData();
   },[])
   return (<>
-    <div>
-      <h1>
-    ProjectList
+      <img src="robotics_4.jpg" alt="1" className="img1"></img>
+      <h1 className="ProjectList" >
+    Explore Our New Projects
       </h1>
-    </div>
+       <main className="test">
+       <h1 className="UserList">User List</h1>
 
-    <main className="test">
-      <h1>User List</h1> 
       <div className="project-continer">
         {user && user.length > 0 && user.map((userObj, index) => (
-          
-          // <div className="card" style={{ backgroundImage: `url(${})` }}></div>
-          <Link to = {`/ProjectDetails/${userObj.id}`}>
+             <Link to = {`/ProjectDetails/${userObj.id}`}>
 
         <div className="card" style={{ backgroundImage:`url(${img})` }} >
           
@@ -42,6 +39,7 @@ const ProjectList = () => {
          
         </div>
         </Link>
+
            // <li key={userObj.id}>{userObj.username}</li>
            
           ))}
