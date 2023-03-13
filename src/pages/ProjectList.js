@@ -7,7 +7,6 @@ import "./ProjectList.css";
 
 
 const ProjectList = () => {
-  
   const [user, setUser] = useState([]);
   const fetchData = () => {
     return fetch("https://jsonplaceholder.typicode.com/users")
@@ -19,7 +18,6 @@ const ProjectList = () => {
   useEffect(() => {
     fetchData();
   },[])
-  
   return (<>
     <div>
       <h1>
@@ -31,9 +29,7 @@ const ProjectList = () => {
       <ol> 
         { user && user.length > 0 && user.map((userObj, index) => (
       <li key={userObj.id}>
-      
       <Card className="card" style={{ width: '600px'  }}>
-             
              <Link to={`/ProjectList/${userObj.id}`}>
              {userObj.name}
              </Link>
@@ -43,11 +39,8 @@ const ProjectList = () => {
         <Card.Text>
         {userObj.company.catchPhrase}
         </Card.Text>
-        
       </Card.Body>
     </Card></li>
-          
-           
           ))}
       </ol>
     </main>
