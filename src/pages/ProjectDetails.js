@@ -29,7 +29,9 @@ const ProjectDetails = () => {
     <h1>ProjectDetails of {id}</h1>
     <div>
     <div className="head" style={{ backgroundImage:`url(${img})`}}>
+    <div className="D_head "><div className='D_center'>{user.name}</div></div>
     <p className="D_title" >{user.website}</p>
+
    </div>
    {/* <p >{user.company.catchPhrase}</p> */}
       <p>{user.name}</p>
