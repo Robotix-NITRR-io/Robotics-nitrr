@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import  { useEffect, useState } from "react";
 import "./ProjectList.css";
 import {Link} from "react-router-dom";
@@ -7,13 +8,12 @@ import img from "./img.jpg";
 
 
 const ProjectList = () => {
+  
   const [user, setUser] = useState([]);
-
   const fetchData = () => {
     return fetch("https://jsonplaceholder.typicode.com/users")
           .then((response) => response.json())
-          .then((data) => setUser(data));
-          
+          .then((data) => setUser(data));      
   }
 //https://jsonplaceholder.typicode.com/users
 //http://localhost:8080/users
@@ -27,6 +27,7 @@ const ProjectList = () => {
     ProjectList
       </h1>
     </div>
+
     <main className="test">
       <h1>User List</h1> 
       <div className="project-continer">
