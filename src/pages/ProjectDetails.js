@@ -35,6 +35,14 @@ const ProjectDetails = () => {
    </div>
    {/* <p >{user.company.catchPhrase}</p> */}
       <p>{user.name}</p>
+      <p>New generative AI technologies (such as the Generative Adversarial Network, or GAN) can allow us to imagine new species.
+         Hidden within the neural network, there are millions of these "ganimals" that no one has ever seen before.
+         These ganimals occupy a digital landscape not unlike our own, where attention is short, and engagement is necessary to survive
+         Meet the Ganimals is a collaborative social experiment to discover new species, breed your own, and feed the ones you love.
+         The data you provide about the ganimals is their "food." Unfed ganimals are quickly forgotten, so ganimals you engage with have a genetic advantage, and breed more often.
+         Thus, to withstand the harsh conditions of the attention economy, ganimals adapt to the crowd’s opinions and preferences. So the question remains, which ganimals do you want to thrive? 
+         We built Meet the Ganimals to showcase how artificial intelligence can not only generate images of realistic animals,
+         but also images of believable hybrid animals. These hybrid animals are created with a Generative Adversarial Network (GAN), which we baked into their name: ganimals. When we comb</p>
   
     </div>
     </>
