@@ -1,13 +1,9 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
-import  { useEffect, useState } from "react";
-
-
-
-
-
-const ProjectDetails = ({}) => {
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
   
+const ProjectDetails = () => {
+
   const params = useParams()
   const id = params.id
  
@@ -26,19 +22,16 @@ const ProjectDetails = ({}) => {
   // },[])
 
 
+
   return (<>
-    
     <h1>ProjectDetails of {id}</h1>
     <div>
+
 
       <p>{user.name}</p>
 
     </div>
-     
-          
-           
-          
-          </>
+    </>
   );
 };
   
