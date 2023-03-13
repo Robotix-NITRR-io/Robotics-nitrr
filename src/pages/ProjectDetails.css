@@ -42,19 +42,20 @@
     height:auto;
     width:auto;
 }
-.D_contaner{
+.D_contaner{ 
+    color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.D_paragraphTitle{
+.D_paragraphTitle{ 
+    color: aliceblue;
     align-self: center;
     max-width: 700px;
 }
-.D_paragraphTitle p{
 
-}
 .D_paragraph{
+    color: aliceblue;
 align-self: center;
 max-width: 700px;
 }
