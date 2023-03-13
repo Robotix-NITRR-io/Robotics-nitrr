@@ -1,6 +1,8 @@
 import React from 'react';
+import "./ProjectDetails.css";
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import img from "../components/assets/projectdetail.jpg";
   
 const ProjectDetails = () => {
 
@@ -26,10 +28,12 @@ const ProjectDetails = () => {
   return (<>
     <h1>ProjectDetails of {id}</h1>
     <div>
-
-
+    <div className="head" style={{ backgroundImage:`url(${img})`}}>
+    <p className="D_title" >{user.website}</p>
+   </div>
+   {/* <p >{user.company.catchPhrase}</p> */}
       <p>{user.name}</p>
-
+  
     </div>
     </>
   );
