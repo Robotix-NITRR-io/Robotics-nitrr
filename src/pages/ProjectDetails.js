@@ -12,7 +12,7 @@ const ProjectDetails = () => {
   
   const [user, setUser] = useState([]);
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+    fetch(`https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman/${id}`)
           .then((response) => response.json())
           .then((data) => setUser(data));
   },[])
@@ -28,9 +28,9 @@ const ProjectDetails = () => {
   return (<>
     
     <div>
-    <div className="head" style={{ backgroundImage:`url(${img})`}}>
+    <div className="head" style={{ backgroundImage:`url(${user.img})`}}>
     <div className="D_head "><div className='D_center'>{user.name}</div></div>
-    <p className="D_title">{user.website}</p>
+    <p className="D_title">{user.team}</p>
 
    </div>
    {/* <p >{user.company.catchPhrase}</p> */}
