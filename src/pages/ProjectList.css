@@ -7,44 +7,71 @@ body {
   position: relative;
   display: flex;
 }
+.contaner{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.img{
+  max-width: 800px;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
 .ProjectList {
   position: absolute;
-  top: 25vh;
+  top: 20vh;
   color: white;
   text-align: center;
   letter-spacing: 2px;
   max-width: 800px;
-  min-width: 400px;
+  min-width: 200px;
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 6px;
   text-transform: uppercase;   
 }
-.img1{
-  max-width: 800px;
-  min-width: 400px;
-  
-  margin-left: auto;
-  margin-right: auto;
-  align-items: center;
-  
+
+@media screen and (max-width: 600px) {
+  .ProjectList{
+    max-width: 800px;
+    top: 10vh;
+  font-size: 2rem;
+  }
 }
-.ProjectList:hover{
-  color: grey;
+@media screen and (max-width: 300px) {
+  .ProjectList{
+    top: 8vh;
+  font-size: 1rem;
+  }
+}
+.contaner_ul{
+  display: flex;
+  justify-content: center;
+}
+.UserList{
+  color: #202342;
+  background-color: #FF8F00;
+  width: fit-content;
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  border-radius: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+}
+@media screen and (max-width: 600px) {
+  .UserList{
+  font-size: 1.5rem;
+  }
 }
 /*
 
-.UserList{
-    color: white;
-    text-align: center;
-    letter-spacing: 2px;
-    
-    font-size: 2.5rem;
-    border-top: 2px solid white;
-    border-bottom: 2px solid white;
-    padding:20px 0px;
-    margin-top: 0px;
-}
+
 
 .ol {
     display: flex;
@@ -65,7 +92,6 @@ body {
 
 .card:hover {
     transform: scale(1.1);
-   
     z-index:1;
     background-color:rgb(83, 122, 153) ;
 }
@@ -94,7 +120,6 @@ body {
     rgba(63, 94, 251, 1) 0%,
     rgba(252, 70, 107, 1) 100%
   );
-
   background-size: 200%;
   line-height: 1.5;
   font-size: 4rem;
@@ -202,8 +227,16 @@ body {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1),
     0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1),
     0 16px 16px rgba(0, 0, 0, 0.1);
+    transition: background-size 2s ;
 }
-
+.card:hover{
+   
+  transition: 1s; 
+  transform: scale(110%);
+  /* background-size: 160%;  */
+  z-index: 1;
+  box-shadow: 10px 10px 10px  #20234272;
+}
 @media (max-width: 800px) {
   .project-continer{
     grid-template-columns: 50% 50%;

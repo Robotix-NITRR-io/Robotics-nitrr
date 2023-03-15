@@ -19,13 +19,15 @@ const ProjectList = () => {
   },[])
   return (<>
       <div className="header">
-        <div className="img1">
-         <img  className="img1" src={arduino} alt="arduino.png" />
+        <div className="contaner">
+         <img  className="img" src={arduino} alt="arduino.png" />
          <h1 className="ProjectList" >Explore Our New Projects</h1>
          </div>
       </div>
        <main className="test">
+       <div className="contaner_ul">
        <h1 className="UserList">User List</h1>
+       </div>
 
       <div className="project-continer">
         {user && user.length > 0 && user.map((userObj, index) => (
