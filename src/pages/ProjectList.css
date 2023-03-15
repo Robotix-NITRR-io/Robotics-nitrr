@@ -237,7 +237,12 @@ body {
   z-index: 1;
   box-shadow: 10px 10px 10px  #20234272;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
+  .project-continer{
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+@media (max-width: 900px) {
   .project-continer{
     grid-template-columns: 50% 50%;
   }
