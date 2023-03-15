@@ -2,6 +2,7 @@ import React from "react";
 import  { useEffect, useState } from "react";
 import  "./ProjectList.css";
 import {Link} from "react-router-dom";
+import img from "./../components/assets/arduino.png"
 
 const ProjectList = () => {
   const [user, setUser] = useState([]);
@@ -17,7 +18,8 @@ const ProjectList = () => {
     fetchData();
   },[])
   return (<>
-      <img src="robotics_4.jpg" alt="1" className="img1"></img>
+     
+      <img  className="img1" src={img} alt="Logo" />
       <h1 className="ProjectList" >
     Explore Our New Projects
       </h1>
