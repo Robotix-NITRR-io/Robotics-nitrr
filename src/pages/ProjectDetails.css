@@ -49,13 +49,13 @@
     justify-content: center;
 }
 .D_paragraphTitle{ 
-    color: aliceblue;
+    color: rgb(4, 4, 4);
     align-self: center;
     max-width: 700px;
 }
 
 .D_paragraph{
-    color: aliceblue;
+    color: rgb(10, 10, 10);
 align-self: center;
 max-width: 700px;
 }

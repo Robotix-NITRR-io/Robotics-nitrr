@@ -1,43 +1,40 @@
 
 body {
-    background-color:#f3f3f3;
-    background-color: black;
-    /* background:  url('../robotics_3.jpg'); */
+    
+    background-color: #202342;
+    
     font-family: 'Josefin Sans', sans-serif;
 }
-
+.ProjectList {
+  position: absolute;
+  top: 215px;
+  left: 369px;
+  color: white;
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 50px 0px;
+  width: 591px;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 6px;
+  text-transform: uppercase;  
+}
+/*
 .img1{
     width: 100%;
     height: 500px;
     opacity: 0.8;
 }
 
-.ProjectList {
-    position: absolute;
-    /* right: 62px; */
-    top: 215px;
-    left: 369px;
-    color: white;
-    text-align: center;
-    letter-spacing: 2px;
-    margin: 50px 0px;
-    width: 591px;
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-}
+
 .ProjectList:hover{
     color: grey;
 }
 .UserList{
-    /* background-color: black; */
     color: white;
-    /* color:white; */
     text-align: center;
     letter-spacing: 2px;
-    /* margin: 0px; */
+    
     font-size: 2.5rem;
     border-top: 2px solid white;
     border-bottom: 2px solid white;
@@ -53,11 +50,7 @@ body {
 }
 
 .card {
-    /* border: 2px solid rgb(226, 213, 213); */
-    /* border-radius: 20px; */
-    /* margin-bottom: 20px; */
-    /* width: 500px; */
-    /* padding: 10px; */
+    
     transition: all 1s;
     background-color:rgb(118 150 177);
     margin: 3px;
@@ -68,20 +61,15 @@ body {
 
 .card:hover {
     transform: scale(1.1);
-    /* border: 2px solid white ; */
+   
     z-index:1;
     background-color:rgb(83, 122, 153) ;
 }
 
-/* .project-continer{
-    display: flex;
-
-} */
-
 
 .test{
     display: grid;
-}
+} */
 
 
 

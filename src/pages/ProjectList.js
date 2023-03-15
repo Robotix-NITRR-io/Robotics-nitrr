@@ -1,10 +1,7 @@
 import React from "react";
 import  { useEffect, useState } from "react";
-import "./ProjectList.css";
+import  "./ProjectList.css";
 import {Link} from "react-router-dom";
-//import img from "./img.jpg";
-
-
 
 const ProjectList = () => {
   const [user, setUser] = useState([]);
