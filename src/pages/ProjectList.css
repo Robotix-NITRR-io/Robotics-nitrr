@@ -1,35 +1,39 @@
 
 body {
-    
     background-color: #202342;
-    
     font-family: 'Josefin Sans', sans-serif;
+}
+.header{
+  position: relative;
+  display: flex;
 }
 .ProjectList {
   position: absolute;
-  top: 215px;
-  left: 369px;
+  top: 25vh;
   color: white;
   text-align: center;
   letter-spacing: 2px;
-  margin: 50px 0px;
-  width: 591px;
+  max-width: 800px;
+  min-width: 400px;
   font-size: 3rem;
   font-weight: 800;
   letter-spacing: 6px;
-  text-transform: uppercase;  
+  text-transform: uppercase;   
+}
+.img1{
+  max-width: 800px;
+  min-width: 400px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  
+}
+.ProjectList:hover{
+  color: grey;
 }
 /*
-.img1{
-    width: 100%;
-    height: 500px;
-    opacity: 0.8;
-}
 
-
-.ProjectList:hover{
-    color: grey;
-}
 .UserList{
     color: white;
     text-align: center;

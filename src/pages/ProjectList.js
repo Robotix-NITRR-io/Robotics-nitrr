@@ -2,7 +2,7 @@ import React from "react";
 import  { useEffect, useState } from "react";
 import  "./ProjectList.css";
 import {Link} from "react-router-dom";
-import img from "./../components/assets/arduino.png"
+import arduino from "./../components/assets/arduino.png"
 
 const ProjectList = () => {
   const [user, setUser] = useState([]);
@@ -18,11 +18,12 @@ const ProjectList = () => {
     fetchData();
   },[])
   return (<>
-     
-      <img  className="img1" src={img} alt="Logo" />
-      <h1 className="ProjectList" >
-    Explore Our New Projects
-      </h1>
+      <div className="header">
+        <div className="img1">
+         <img  className="img1" src={arduino} alt="arduino.png" />
+         <h1 className="ProjectList" >Explore Our New Projects</h1>
+         </div>
+      </div>
        <main className="test">
        <h1 className="UserList">User List</h1>
 
