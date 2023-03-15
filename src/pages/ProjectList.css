@@ -242,7 +242,7 @@ body {
     grid-template-columns: 50% 50%;
   }
 }
-@media (max-width: 412px) {
+@media (max-width: 500px) {
     .project-continer{
       grid-template-columns: 100%;
     }
