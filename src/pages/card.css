@@ -1,0 +1,61 @@
+.Card_cantaner{
+ position: relative;
+ color: aliceblue; 
+ background-color: rgba(97, 100, 102, 0.389);
+ width: 360px;  
+ min-height: 300px;
+ border-radius: 10px;
+ padding: 1px;
+
+}
+.card_img{
+    background-color: white;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 15px;
+    width: 330px;  
+    min-height: 200px;
+}
+.card_user{
+background-color: white;
+border-radius: 10px;
+width: 50px;
+height: 50px;
+}
+.card_contex{
+width: auto;
+display: flex;
+flex-direction: row;
+margin: 15px; 
+}
+.card_text{
+    margin-left:1rem ;
+}
+.icons_menu{
+    height:50px;
+    position: absolute;
+    right: 15px;
+    font-size: 2em;
+}
+.card_icon{
+    display: flex;
+    flex-direction: row; 
+    margin: 15px;
+    position: relative;
+    font-size: 0.9em;
+    /* ====== */
+}
+.icons{
+    margin-left: 5px;
+    padding: 3px;
+    padding-right: 9px;
+    background-color: rgba(0, 0, 0, 0.747);
+    border-radius: 5px;
+}
+.icons span{
+   position: relative;
+   top: 2px;
+}
+
+.display{display: block;}
+.display_null{display: none;}

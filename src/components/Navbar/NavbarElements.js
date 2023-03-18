@@ -1,5 +1,5 @@
 import { FaBars } from "react-icons/fa";
-import { NavLink as Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import styled from "styled-components";
   
 export const Nav = styled.nav`
@@ -56,7 +56,7 @@ export const NavMenu = styled.div`
   /* Third Nav */
   /* width: 100vw;
 white-space: nowrap; */
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 700px) {
     display: none;
   }
 `;
