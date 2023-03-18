@@ -17,12 +17,12 @@ const ProjectDetails = () => {
           .then((response) => response.json())
           .then((data) => setUser(data));
   },[])
-  // const [img, setimg] = useState([]);
-  // useEffect(() => {
-  //   fetch(`https://randomuser.me/api`)
-  //         .then((response) => response.json())
-  //         .then((data) => setimg(data));
-  // },[])
+  const [img, setimg] = useState([]);
+  useEffect(() => {
+    fetch(`https://randomuser.me/api`)
+          .then((response) => response.json())
+          .then((data) => setimg(data));
+  },[])
 
 
 
