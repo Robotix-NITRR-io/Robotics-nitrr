@@ -16,7 +16,22 @@ const AddProject = () => {
     setuserInfo({
       ...userInfo,
       [e.target.name]:e.target.value
+
+
     });
+  }
+
+  const handleSubmit = (event) =>{
+    event.preventDefault();
+    // event.persist();
+    //   if(userInfo.description.value.length < 50){
+    //     setError('Required, Add description minimum length 50 characters');
+    //     return;
+    //   }
+    axios.post('http://localhost:80/api/user/save', {
+      title: userInfo.title,
+      description: userInfo.description.value
+    })
   }
   
   let editorState = EditorState.createEmpty();
@@ -26,25 +41,20 @@ const AddProject = () => {
   }
   
   const [isError, setError] = useState(null);
-  // const addDetails = async (event) => {
+  // const PoemAddbooks = async (event) => {
   //   try {
   //     event.preventDefault();
-  //     event.persist();
-  //     if(userInfo.description.value.length < 50){
-  //       setError('Required, Add description minimum length 50 characters');
-  //       return;
-  //     }
-  //     axios.post(`http://localhost:8080/addArticle`, {
+  //     axios.post(`http://localhost:80/user/save`, {
   //       title: userInfo.title,
-  //       description: userInfo.description.value
+  //       description: userInfo.description.value,
   //     })
-  //     .then(res => {
+  //     .then(res => { // then print response status
   //       if(res.data.success === true){
-  //         history.push('/');
+  //         // navigator('')
   //       }
   //     })
   //   } catch (error) { throw error;}    
-  // } 
+  // }
 
 
 
@@ -54,7 +64,7 @@ const AddProject = () => {
     <div className="container">  
     {/* this is where the section begins */}
       <div className="row"> 
-        <form className="update__forms">
+        <form className="update__forms" onSubmit={handleSubmit}>
           <h3 className="myaccount-content"> Add  </h3>
           <div className="form-row">
             <div className="form-col-1">
@@ -73,7 +83,7 @@ const AddProject = () => {
               <textarea style={{display:'none'}} disabled ref={(val) => userInfo.description = val} value={draftToHtml(convertToRaw(description.getCurrentContent())) } />
               {/* change display to watch html code that wysiwyg creates */}
             </div>
-            {/* {isError !== null && <div className="errors"> {isError} </div>} */}
+            {isError !== null && <div className="errors"> {isError} </div>}
             <div className="col-3">
               <button type="submit" className="submit-button"> Submit  </button>
             </div> 
