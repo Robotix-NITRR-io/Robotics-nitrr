@@ -7,8 +7,13 @@ import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 import './AddProject.css'
 
-  
+ 
+
+
 const AddProject = () => {
+
+  const navigate = useNavigate();
+
   const [userInfo, setuserInfo] = useState({
     title: '',
   });
@@ -23,14 +28,17 @@ const AddProject = () => {
 
   const handleSubmit = (event) =>{
     event.preventDefault();
-    // event.persist();
-    //   if(userInfo.description.value.length < 50){
-    //     setError('Required, Add description minimum length 50 characters');
-    //     return;
-    //   }
+    event.persist();
+      if(userInfo.description.value.length < 50){
+        setError('Required, Add description minimum length 50 characters');
+        return;
+      }
     axios.post('http://localhost:80/api/user/save', {
       title: userInfo.title,
       description: userInfo.description.value
+    }).then(function(res){
+      console.log(res.data);
+      navigate('/ProjectList')
     })
   }
   
@@ -41,23 +49,7 @@ const AddProject = () => {
   }
   
   const [isError, setError] = useState(null);
-  // const PoemAddbooks = async (event) => {
-  //   try {
-  //     event.preventDefault();
-  //     axios.post(`http://localhost:80/user/save`, {
-  //       title: userInfo.title,
-  //       description: userInfo.description.value,
-  //     })
-  //     .then(res => { // then print response status
-  //       if(res.data.success === true){
-  //         // navigator('')
-  //       }
-  //     })
-  //   } catch (error) { throw error;}    
-  // }
-
-
-
+ 
   return (
     <>
     <div className="Addproject">
@@ -79,8 +71,15 @@ const AddProject = () => {
                   wrapperClassName="wrapperClassName"
                   editorClassName="editorClassName"
                   onEditorStateChange={onEditorStateChange}
+                  toolbar={{
+                    inline: { inDropdown: true },
+                    list: { inDropdown: true },
+                    textAlign: { inDropdown: true },
+                    link: { inDropdown: true },
+                    history: { inDropdown: true },
+                  }}
                 />
-              <textarea style={{display:'none'}} disabled ref={(val) => userInfo.description = val} value={draftToHtml(convertToRaw(description.getCurrentContent())) } />
+              <textarea style={{display:''}} disabled ref={(val) => userInfo.description = val} value={draftToHtml(convertToRaw(description.getCurrentContent())) } />
               {/* change display to watch html code that wysiwyg creates */}
             </div>
             {isError !== null && <div className="errors"> {isError} </div>}
