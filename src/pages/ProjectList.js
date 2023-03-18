@@ -36,7 +36,7 @@ const ProjectList = () => {
         <div className="card" style={{ backgroundImage:`url(${userObj.img})` }} >
           
           <div className="content">
-            <h2 className="title">{userObj.name}</h2>
+            <h2 className="Title">{userObj.name}</h2>
             <p className="copy">{userObj.team}</p>
           </div>
          
