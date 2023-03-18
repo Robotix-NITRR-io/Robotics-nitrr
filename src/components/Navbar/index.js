@@ -20,9 +20,6 @@ const Navbar = () => {
           <NavLink to="/sign-up" activeStyle>
             Sign Up
           </NavLink>
-          <NavLink to="/editor" activeStyle>
-            Editor
-          </NavLink>
         </NavMenu>
       </Nav>
     </>
