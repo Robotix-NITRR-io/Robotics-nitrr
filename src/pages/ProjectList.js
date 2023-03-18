@@ -3,17 +3,22 @@ import  { useEffect, useState } from "react";
 import  "./ProjectList.css";
 import {Link} from "react-router-dom";
 import arduino from "./../components/assets/arduino.png"
+import axios from 'axios';
 
 const ProjectList = () => {
-  const [user, setUser] = useState([]);
-  const fetchData = () => {
-    return fetch("https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman")
-          .then((response) => response.json())
-          .then((data) => setUser(data));      
+
+const [user, setUser] = useState([]);
+
+const fetchData = () => {
+    axios.get("http://localhost:80/api/user/save").then(function(res){
+    console.log(res.data);
+    setUser(res.data);
+  });    
   }
-//https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman
-//https://jsonplaceholder.typicode.com/users
-//http://localhost:8080/users
+
+
+ 
+
   useEffect(() => {
     fetchData();
   },[])
@@ -31,19 +36,20 @@ const ProjectList = () => {
 
       <div className="project-continer">
         {user && user.length > 0 && user.map((userObj, index) => (
-             <Link to = {`/ProjectDetails/${userObj.id}`}>
+        <Link to = {`/ProjectDetails/${userObj.id}`}>
 
         <div className="card" style={{ backgroundImage:`url(${userObj.img})` }} >
           
           <div className="content">
-            <h2 className="Title">{userObj.name}</h2>
-            <p className="copy">{userObj.team}</p>
+            <h2 className="Title">{userObj.title}</h2>
+            <div className="copy" dangerouslySetInnerHTML={{ __html: userObj.description}}  />
+
           </div>
          
         </div>
         </Link>
 
-           // <li key={userObj.id}>{userObj.username}</li>
+  
            
           ))}
       </div>
