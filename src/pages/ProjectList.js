@@ -17,9 +17,9 @@ const [user, setUser] = useState([]);
 //         .then((data) => setUser(data));      
 // }
 const fetchData = () => {
-    axios.get("http://localhost:80/api/user/save/${id}")
+    axios.get(`http://localhost:80/api/user/save/`)
     .then(function(res){
-    console.log(res.data);
+    //console.log(res.data);
     setUser(res.data);
   });    
   }
@@ -51,7 +51,7 @@ const fetchData = () => {
    
 
           {user && user.length > 0 && user.map((userObj, index) => (
-        <Link to = {`/ProjectDetails/${userObj.id}`}>
+        <Link to = {`/ProjectDetails/${userObj.id}`} className="link">
           <div className="card1">
         <div className="Card_cantaner"> 
      <div className="card_img" style={{ backgroundImage:`url(${userObj.thumb})` }}></div>

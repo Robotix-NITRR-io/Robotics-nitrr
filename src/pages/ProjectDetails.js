@@ -4,38 +4,40 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 //import img from "../components/assets/projectdetail.jpg";
 import {AiFillHeart} from "react-icons/ai";
+import axios from 'axios';
   
 const ProjectDetails = () => {
 
-  const params = useParams()
-  const id = params.id
-  
-  const [user, setUser] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:80/api/user/save/${id}`)
-          .then((response) => response.json())
-          .then((data) => setUser(data));
-  },[])
-  const [img, setimg] = useState([]);
-  useEffect(() => {
-    fetch(`https://randomuser.me/api`)
-          .then((response) => response.json())
-          .then((data) => setimg(data));
-  },[])
+
+const {id} = useParams();
+
+const [ispost, setpost] = useState([]);
+useEffect(() => {
+    viewPost();
+}, []);
+
+
+
+function viewPost(){
+  axios.get(`http://localhost:80/api/user/${id}`).then(function(res){
+    console.log(res.data);
+    setpost(res.data[0]);
+  })
+}
 
 
 
   return (<>
     <div>
-    <div className="head" style={{ backgroundImage:`url(${user.img})`}}>
-    <div className="D_head "><div className='D_center'>{user.name}</div></div>
-    <p className="D_title">{user.team}</p>
+    <div className="head" style={{ backgroundImage:`url(${ispost.thumb})`}}>
+    <div className="D_head "><div className='D_center'>{ispost.title}</div></div>
+    <p className="D_title">{ispost.description}</p>
 
    </div>
    <div className="D_contaner">
-      <div className='D_paragraphTitle'><p><b>{id}:{user.name}</b></p></div>
+      <div className='D_paragraphTitle'><p><b>{id}:{ispost.title}</b></p></div>
       <p className='D_paragraph'><AiFillHeart/>
-        The vision of Extended Reality (XR) systems is living in a hybrid reality or "Metaverse" where real and virtual elements seamlessly and contextually augment experiences of ourselves and the worlds we inhabit. While this integration promises exciting opportunities for the future of XR, it comes at the risk of experiential distortions and feelings of dissociation, especially related to virtual reality. When transitioning from a virtual world to the real, users often report experiential structures to linger on, as sort-of after images, causing disruptions in a user's daily life. In this work, we define these atypical experiences as experiential artifacts and present preliminary results from an informal survey conducted online with 76 VR users to highlight different types and their durations. Based on models of cognition as situated, we propose Situated VR, which blends the real and virtual in novel ways, as a method that can potentially help reduce the artifacts and simultaneously increase the user's sense of presence. 
+        <p className='post_descriptoin' dangerouslySetInnerHTML={{ __html: ispost.description}}/>
       </p>
       </div>
     </div>
