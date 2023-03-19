@@ -34,7 +34,6 @@ body {
   letter-spacing: 6px;
   text-transform: uppercase;   
 }
-
 @media screen and (max-width: 600px) {
   .ProjectList{
     max-width: 800px;
@@ -56,7 +55,7 @@ body {
   color: #202342;
   background-color: #FF8F00;
   width: fit-content;
-  padding: 20px;
+  padding: 0.5em;
   text-align: center;
   letter-spacing: 2px;
   font-size: 2.5rem;
@@ -70,6 +69,7 @@ body {
   font-size: 1.5rem;
   }
 }
+
 @media (max-width: 1000px) {
   .project-continer{
     grid-template-columns: 33% 33% 33%;
@@ -92,35 +92,38 @@ body {
       box-shadow: 10px 10px 10px  #20234272;
     }
   }
-
+.project_continer_center{
+  display: flex;
+  justify-content: center;
+}
 
 
 .project-continer {
-  grid-gap: 0;
+  grid-gap: 10px;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: 400px 400px 400px 400px;
   /* flex-wrap: wrap; */
   /* justify-content: center; */
   padding: 1rem;
   /* change width here */
   /* max-width: 100%; */
   align-items: center;
-  max-width: 100%;
+  max-width: max-content;
   font-family: var(--font-sans);
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1680px) {
   .project-continer{
     grid-template-columns: 33% 33% 33%;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1284px) {
   .project-continer{
     grid-template-columns: 50% 50%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 845px) {
     .project-continer{
       grid-template-columns: 100%;
     }
