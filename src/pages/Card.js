@@ -1,11 +1,16 @@
 import React  from "react";
 import  "./card.css";
-//CiMenu,Kebab   menu <FaBeer /> AiFillLike
+
 import {AiOutlineEllipsis, AiOutlineBars,AiFillHeart,AiFillMessage } from "react-icons/ai";
+import favicon from "./../components/assets/favicon.png"
+import gear from "./../components/assets/gear.png"
 
 const Card = () => {
   return (<> 
-  <div className="card1">
+
+  
+
+  <div className="card1 rotaion">
     <div className="Card_cantaner"> 
      <div className="card_img"></div>
      <div className="card_contex">
@@ -24,6 +29,13 @@ const Card = () => {
         </div>
      </div>
      </div>
+
+     <div className="rotation_box_position">
+    <div className="rotation_box">
+     <img className='favicon rotationL' src={favicon} alt="Logo" />
+     <img className='gear rotationR' src={gear} alt="Logo" />
+     </div> </div>
+    
         </>
   );
 };

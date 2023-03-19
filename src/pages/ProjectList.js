@@ -6,7 +6,8 @@ import {Link} from "react-router-dom";
 import arduino from "./../components/assets/arduino.png"
 import axios from 'axios';
 import {AiOutlineEllipsis, AiOutlineBars,AiFillHeart,AiFillMessage } from "react-icons/ai";
-
+import favicon from "./../components/assets/favicon.png"
+import gear from "./../components/assets/gear.png"
 
 const ProjectList = () => {
 
@@ -36,6 +37,7 @@ const fetchData = () => {
     // fetchData1();
   },[])
   return (<>
+  
       <div className="header">
         <div className="contaner">
          <img  className="img" src={arduino} alt="arduino.png" />
@@ -44,7 +46,7 @@ const fetchData = () => {
       </div>
        <main className="test">
        <div className="contaner_ul">
-       <h1 className="UserList">User List</h1>
+       <h1 className="UserList">Project List</h1>
        </div>
 <div className="project_continer_center">
       <div className="project-continer">
@@ -78,7 +80,12 @@ const fetchData = () => {
       </div>
       </div>
     </main>
-   
+
+    <div className="rotation_box_position">
+    <div className="rotation_box">
+     <img className='favicon rotationL' src={favicon} alt="Logo" />
+     <img className='gear rotationR' src={gear} alt="Logo" />
+     </div> </div>
     </>
   );
 };
