@@ -46,10 +46,8 @@ const fetchData = () => {
        <div className="contaner_ul">
        <h1 className="UserList">User List</h1>
        </div>
-
+<div className="project_continer_center">
       <div className="project-continer">
-   
-
           {user && user.length > 0 && user.map((userObj, index) => (
         <Link to = {`/ProjectDetails/${userObj.id}`}>
           <div className="card1">
@@ -73,6 +71,7 @@ const fetchData = () => {
      </div>
         </Link>
           ))}
+      </div>
       </div>
     </main>
    
