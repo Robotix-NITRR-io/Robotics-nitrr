@@ -87,6 +87,7 @@ margin: 15px;
     color: rgb(88 199 250 / 0%);
     cursor: pointer;
    margin: auto;
+   margin-bottom: 15px;
   }
   
   .card1:hover {
@@ -113,7 +114,6 @@ margin: 15px;
       left: -0.5%;
       animation: spin 2.5s linear infinite;
   }
-  
   .card1::after {
     position: absolute;
     content: "";
@@ -133,7 +133,6 @@ margin: 15px;
     transition: opacity .5s;
     animation: spin 2.5s linear infinite;
   }
-  
   @keyframes spin {
     0% {
       --rotate: 0deg;

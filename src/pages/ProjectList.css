@@ -33,7 +33,6 @@ body {
   letter-spacing: 6px;
   text-transform: uppercase;   
 }
-
 @media screen and (max-width: 600px) {
   .ProjectList{
     max-width: 800px;
@@ -109,17 +108,17 @@ body {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1680px) {
   .project-continer{
     grid-template-columns: 33% 33% 33%;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1284px) {
   .project-continer{
     grid-template-columns: 50% 50%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 845px) {
     .project-continer{
       grid-template-columns: 100%;
     }
