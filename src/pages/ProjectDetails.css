@@ -1,61 +1,66 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,600;1,700&display=swap');
-
-.head{ color: black;
-    background-repeat: no-repeat;
-    background-size: cover;
+.D_body{
+    background-image: center;
     width: 100vw;
-    height: 400px;
-    position: relative;
-}
-.title{
-    color: black;
-    background-color: rgba(240, 248, 255, 0);
-
-}
-.D_head{ 
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    font-size: 4rem;
-   
+    color: rgb(3, 3, 3);
+    background-color: #363a6500;
 }
-.D_center{  
-    width: auto;
-    color: rgb(249, 246, 246);
-    background-color: rgba(0, 0, 0, 0.552);
-}
-.D_title{ 
-    text-align: center;
-    font-family: Century Gothic;
-    font-size: 4rem;
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    margin-bottom: 0;
-    bottom: 0;
-    left: 0px;
-    height:auto;
-    width:auto;
-}
-.D_contaner{ 
-    color: aliceblue;
+.D_continer{
+   width: 80vw;
+   height: max-content;
+    background-color: white;
+    margin-top: 3em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+   position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.599) 0px 4px 6px, rgba(255, 255, 255, 0.656) 0px 12px 13px, rgba(255, 255, 255, 0.639) 0px -3px 5px;
+     }
+.head{ 
+    height: 20vh;
 }
-.D_paragraphTitle{ 
-    color: rgb(4, 4, 4);
-    align-self: center;
-    max-width: 700px;
+.D_context{
+    min-height:50% ;
+    margin: 3rem;
+    margin-top: 2rem;
+}
+.D_title{ 
+    font-size: 3em;
+     font-weight:bolder;
+     text-shadow: 3px 3px 3px rgb(77, 77, 77);
+}
+.D_footer{ position: static;
+    bottom: 0%;
+    background-color: rgb(216, 216, 217);
+    height: 8vh;
+    display: flex;   
+    flex-direction: row;
+    justify-content: baseline;
+    gap: 1em;
+}
+.D_user{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 5%;
+    background-color: rgb(0, 0, 0);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 2rem;
+}
+.D_user_img{
+    height: 3.6rem;
+}
+.D_user_name{
+    font-size: 1.4em; 
+}
+.Author{ 
+    margin-bottom: 0;
+    }
+.name{
+    font-size: 1em;
+    margin-top: 0;
 }
 
-.D_paragraph{
-    color: rgb(10, 10, 10);
-align-self: center;
-max-width: 700px;
-}
