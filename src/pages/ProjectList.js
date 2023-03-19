@@ -11,13 +11,13 @@ import {AiOutlineEllipsis, AiOutlineBars,AiFillHeart,AiFillMessage } from "react
 const ProjectList = () => {
 
 const [user, setUser] = useState([]);
-const fetchData1 = () => {
-  return fetch("https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman")
-        .then((response) => response.json())
-        .then((data) => setUser(data));      
-}
+// const fetchData1 = () => {
+//   return fetch("https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman")
+//         .then((response) => response.json())
+//         .then((data) => setUser(data));      
+// }
 const fetchData = () => {
-    axios.get("https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman/${id}")
+    axios.get("http://localhost:80/api/user/save/${id}")
     .then(function(res){
     console.log(res.data);
     setUser(res.data);
@@ -33,7 +33,7 @@ const fetchData = () => {
 
   useEffect(() => {
     fetchData();
-    fetchData1();
+    // fetchData1();
   },[])
   return (<>
       <div className="header">
@@ -54,10 +54,10 @@ const fetchData = () => {
         <Link to = {`/ProjectDetails/${userObj.id}`}>
           <div className="card1">
         <div className="Card_cantaner"> 
-     <div className="card_img" style={{ backgroundImage:`url(${userObj.img})` }}></div>
+     <div className="card_img" style={{ backgroundImage:`url(${userObj.thumb})` }}></div>
      <div className="card_contex">
          <div className="card_user"></div>
-         <div className="card_text"><b>{userObj.name}</b><p>{userObj.team}</p></div>
+         <div className="card_text"><b>{userObj.title}</b></div>
          <div className="card_menu"><AiOutlineEllipsis/></div>
          <div className="icons_menu" ><AiOutlineBars/>
         </div>
