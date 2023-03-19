@@ -11,6 +11,7 @@
 }
 .D_continer{
    width: 80vw;
+   max-width: 800px;
    height: max-content;
     background-color: white;
     margin-top: 3em;
