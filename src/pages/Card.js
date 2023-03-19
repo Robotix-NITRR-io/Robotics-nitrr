@@ -4,7 +4,8 @@ import  "./card.css";
 import {AiOutlineEllipsis, AiOutlineBars,AiFillHeart,AiFillMessage } from "react-icons/ai";
 
 const Card = () => {
-  return (<>
+  return (<> 
+  <div className="card1">
     <div className="Card_cantaner"> 
      <div className="card_img"></div>
      <div className="card_contex">
@@ -21,6 +22,7 @@ const Card = () => {
           <div className="icons"><AiFillMessage/> <span>3</span></div>
         </div>
         </div>
+     </div>
      </div>
         </>
   );

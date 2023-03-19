@@ -9,7 +9,6 @@ const ProjectDetails = () => {
 
   const params = useParams()
   const id = params.id
- 
   
   const [user, setUser] = useState([]);
   useEffect(() => {

@@ -48,18 +48,9 @@ const fetchData = () => {
        </div>
 
       <div className="project-continer">
-        {user && user.length > 0 && user.map((userObj, index) => (
-        <Link to = {`/ProjectDetails/${userObj.id}`}>
-        <div className="card" style={{ backgroundImage:`url(${userObj.img})` }} >
-          <div className="content">
-            <h2 className="Title">{userObj.title}</h2>
-            <div className="copy" dangerouslySetInnerHTML={{ __html: userObj.description}}  />
-          </div>
-        </div>
-        </Link>
-          ))}
           {user && user.length > 0 && user.map((userObj, index) => (
         <Link to = {`/ProjectDetails/${userObj.id}`}>
+          <div className="card1">
         <div className="Card_cantaner"> 
      <div className="card_img" style={{ backgroundImage:`url(${userObj.img})` }}></div>
      <div className="card_contex">
@@ -76,6 +67,7 @@ const fetchData = () => {
           <div className="icons"><AiFillMessage/> <span>3</span></div>
         </div>
         </div>
+     </div>
      </div>
         </Link>
           ))}
