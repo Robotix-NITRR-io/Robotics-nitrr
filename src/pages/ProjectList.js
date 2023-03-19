@@ -46,15 +46,17 @@ const fetchData = () => {
        <div className="contaner_ul">
        <h1 className="UserList">User List</h1>
        </div>
-
+<div className="project_continer_center">
       <div className="project-continer">
-   
-
           {user && user.length > 0 && user.map((userObj, index) => (
+
         <Link to = {`/ProjectDetails/${userObj.id}`} className="link">
           <div className="card1">
         <div className="Card_cantaner"> 
      <div className="card_img" style={{ backgroundImage:`url(${userObj.thumb})` }}></div>
+          
+     </Link>
+
      <div className="card_contex">
          <div className="card_user"></div>
          <div className="card_text"><b>{userObj.title}</b></div>
@@ -71,8 +73,9 @@ const fetchData = () => {
         </div>
      </div>
      </div>
-        </Link>
+       
           ))}
+      </div>
       </div>
     </main>
    
