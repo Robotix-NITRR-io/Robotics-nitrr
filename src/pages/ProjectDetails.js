@@ -12,7 +12,7 @@ const ProjectDetails = () => {
   
   const [user, setUser] = useState([]);
   useEffect(() => {
-    fetch(`https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman/${id}`)
+    fetch(`http://localhost:80/api/user/save/${id}`)
           .then((response) => response.json())
           .then((data) => setUser(data));
   },[])
@@ -32,7 +32,6 @@ const ProjectDetails = () => {
     <p className="D_title">{user.team}</p>
 
    </div>
-   {/* <p >{user.company.catchPhrase}</p> */}
    <div className="D_contaner">
       <div className='D_paragraphTitle'><p><b>{id}:{user.name}</b></p></div>
       <p className='D_paragraph'><AiFillHeart/>
@@ -41,13 +40,6 @@ const ProjectDetails = () => {
       </div>
     </div>
 
-
-
-
-
-    <div className='C'>
-
-    </div>
     </>
   );
 };

@@ -35,7 +35,8 @@ const AddProject = () => {
       }
     axios.post('http://localhost:80/api/user/save', {
       title: userInfo.title,
-      description: userInfo.description.value
+      description: userInfo.description.value,
+      thumb: userInfo.thumb
     }).then(function(res){
       console.log(res.data);
       navigate('/ProjectList')
@@ -57,11 +58,17 @@ const AddProject = () => {
     {/* this is where the section begins */}
       <div className="row"> 
         <form className="update__forms" onSubmit={handleSubmit}>
-          <h3 className="myaccount-content"> Add  </h3>
+          <h3 className="form-add"> CREATE YOUR POST  </h3>
           <div className="form-row">
             <div className="form-col-1">
+              <div className='row-1' id='test'>
               <label className="form-title"> Title <span className="required"> * </span> </label>
               <input type="text" name="title" value={userInfo.title} onChange={onChangeValue}  className="form-control" placeholder="Title" required />
+              </div>
+              <div className='row-2'>
+              <label className="form-thumb">Thumbnail </label>
+              <input type="text" name="thumb" value={userInfo.thumb} onChange={onChangeValue}  className="form-thumb" placeholder="Past your Thumbnail"/>
+              </div>
             </div>
             <div className="form-col-2">
               <label className="form-description"> Description <span className="required"> * </span> </label>
@@ -71,15 +78,9 @@ const AddProject = () => {
                   wrapperClassName="wrapperClassName"
                   editorClassName="editorClassName"
                   onEditorStateChange={onEditorStateChange}
-                  toolbar={{
-                    inline: { inDropdown: true },
-                    list: { inDropdown: true },
-                    textAlign: { inDropdown: true },
-                    link: { inDropdown: true },
-                    history: { inDropdown: true },
-                  }}
+
                 />
-              <textarea style={{display:''}} disabled ref={(val) => userInfo.description = val} value={draftToHtml(convertToRaw(description.getCurrentContent())) } />
+              <textarea style={{display:'none'}} disabled ref={(val) => userInfo.description = val} value={draftToHtml(convertToRaw(description.getCurrentContent())) } />
               {/* change display to watch html code that wysiwyg creates */}
             </div>
             {isError !== null && <div className="errors"> {isError} </div>}

@@ -48,6 +48,8 @@ const fetchData = () => {
        </div>
 
       <div className="project-continer">
+   
+
           {user && user.length > 0 && user.map((userObj, index) => (
         <Link to = {`/ProjectDetails/${userObj.id}`}>
           <div className="card1">
