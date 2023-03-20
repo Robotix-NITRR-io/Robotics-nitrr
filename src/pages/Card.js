@@ -10,7 +10,7 @@ const Card = () => {
 
   
 
-  <div className="card1 rotaion">
+  <div className="card1 ">
     <div className="Card_cantaner"> 
      <div className="card_img"></div>
      <div className="card_contex">
