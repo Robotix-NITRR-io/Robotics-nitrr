@@ -57,7 +57,7 @@ const fetchData = () => {
         <div className="Card_cantaner"> 
      <div className="card_img" style={{ backgroundImage:`url(${userObj.thumb})` }}></div>
           
-     
+
 
      <div className="card_contex">
          <div className="card_user"></div>
@@ -75,7 +75,10 @@ const fetchData = () => {
         </div>
      </div>
      </div>
-     </Link>
+
+      </Link>
+       
+
           ))}
       </div>
       </div>
