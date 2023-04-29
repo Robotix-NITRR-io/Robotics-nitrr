@@ -11,31 +11,31 @@ import gear from "./../components/assets/gear.png"
 
 const ProjectList = () => {
 
-const [user, setUser] = useState([]);
-// const fetchData1 = () => {
-//   return fetch("https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman")
-//         .then((response) => response.json())
-//         .then((data) => setUser(data));      
-// }
-const fetchData = () => {
-    axios.get(`http://localhost:80/api/user/save/`)
-    .then(function(res){
-    //console.log(res.data);
-    setUser(res.data);
-  });    
-  }
+// const [user, setUser] = useState([]);
+// // const fetchData1 = () => {
+// //   return fetch("https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman")
+// //         .then((response) => response.json())
+// //         .then((data) => setUser(data));      
+// // }
+// const fetchData = () => {
+//     axios.get(`http://localhost:80/api/user/save/`)
+//     .then(function(res){
+//     //console.log(res.data);
+//     setUser(res.data);
+//   });    
+//   }
 
-  //https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman
-//https://jsonplaceholder.typicode.com/users
-//http://localhost:8080/users
+//   //https://640f6bfccde47f68db4a4b91.mockapi.io/api/aman/aman
+// //https://jsonplaceholder.typicode.com/users
+// //http://localhost:8080/users
 
 
  
 
-  useEffect(() => {
-    fetchData();
-    // fetchData1();
-  },[])
+//   useEffect(() => {
+//     fetchData();
+//     // fetchData1();
+//   },[])
   return (<>
   
       <div className="header">
@@ -50,18 +50,12 @@ const fetchData = () => {
        </div>
 <div className="project_continer_center">
       <div className="project-continer">
-          {user && user.length > 0 && user.map((userObj, index) => (
-
-        <Link to = {`/ProjectDetails/${userObj.id}`} className="link">
-          <div className="card1">
-        <div className="Card_cantaner"> 
-     <div className="card_img" style={{ backgroundImage:`url(${userObj.thumb})` }}></div>
-          
-
-
+      <div className="card1 ">
+    <div className="Card_cantaner"> 
+     <div className="card_img"></div>
      <div className="card_contex">
          <div className="card_user"></div>
-         <div className="card_text"><b>{userObj.title}</b></div>
+         <div className="card_text"><b>Hack Game</b><p>alax</p></div>
          <div className="card_menu"><AiOutlineEllipsis/></div>
          <div className="icons_menu" ><AiOutlineBars/>
         </div>
@@ -76,10 +70,67 @@ const fetchData = () => {
      </div>
      </div>
 
-      </Link>
-       
+     <div className="card1 ">
+    <div className="Card_cantaner"> 
+     <div className="card_img"></div>
+     <div className="card_contex">
+         <div className="card_user"></div>
+         <div className="card_text"><b>Hack Game</b><p>alax</p></div>
+         <div className="card_menu"><AiOutlineEllipsis/></div>
+         <div className="icons_menu" ><AiOutlineBars/>
+        </div>
+     </div>
+     <div className="display">
+        <div className="card_icon">
+          {/* <div className="icons"><AiFillLike/> <span>1</span> </div> */}
+          <div className="icons"><AiFillHeart/> <span>2</span></div>
+          <div className="icons"><AiFillMessage/> <span>3</span></div>
+        </div>
+        </div>
+     </div>
+     </div>
 
-          ))}
+     <div className="card1 ">
+    <div className="Card_cantaner"> 
+     <div className="card_img"></div>
+     <div className="card_contex">
+         <div className="card_user"></div>
+         <div className="card_text"><b>Hack Game</b><p>alax</p></div>
+         <div className="card_menu"><AiOutlineEllipsis/></div>
+         <div className="icons_menu" ><AiOutlineBars/>
+        </div>
+     </div>
+     <div className="display">
+        <div className="card_icon">
+          {/* <div className="icons"><AiFillLike/> <span>1</span> </div> */}
+          <div className="icons"><AiFillHeart/> <span>2</span></div>
+          <div className="icons"><AiFillMessage/> <span>3</span></div>
+        </div>
+        </div>
+     </div>
+     </div>
+
+     <div className="card1 ">
+    <div className="Card_cantaner"> 
+     <div className="card_img"></div>
+     <div className="card_contex">
+         <div className="card_user"></div>
+         <div className="card_text"><b>Hack Game</b><p>alax</p></div>
+         <div className="card_menu"><AiOutlineEllipsis/></div>
+         <div className="icons_menu" ><AiOutlineBars/>
+        </div>
+     </div>
+     <div className="display">
+        <div className="card_icon">
+          {/* <div className="icons"><AiFillLike/> <span>1</span> </div> */}
+          <div className="icons"><AiFillHeart/> <span>2</span></div>
+          <div className="icons"><AiFillMessage/> <span>3</span></div>
+        </div>
+        </div>
+     </div>
+     </div>
+
+     
       </div>
       </div>
     </main>

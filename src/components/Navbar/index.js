@@ -7,20 +7,23 @@ const Navbar = () => {
     <>
       <Nav>
         <NavMenu>
+        <NavLink to="/">
+          Home
+          </NavLink>
           <NavLink to="/ProjectList">
           Projects
           </NavLink>
-          <NavLink to="/ProjectDetails">
+          {/* <NavLink to="/ProjectDetails">
           ProjectDetails
-          </NavLink>
+          </NavLink> */}
           <NavLink to="/AddProject">
           AddProject
           </NavLink>
-          <NavLink to="/sign-up">
+          {/* <NavLink to="/sign-up">
             Sign Up
-          </NavLink>
-          <NavLink to="/card">
-            card
+          </NavLink> */}
+          <NavLink to="/team">
+            Team
           </NavLink>
         </NavMenu>
       </Nav>

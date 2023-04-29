@@ -1,7 +1,123 @@
-.home{
+/* .home{
     flex:4;
 }
 .homeWidget{
     display: flex;
     margin:20px;
+} */
+
+.X {
+    animation: flicker 3s linear infinite;
 }
+.index{
+    color: #ffffff;
+    margin: 0;
+}
+.circit{
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    top : 100px;
+    left: 0;
+   opacity: 0.3;
+
+}
+@keyframes flicker {
+
+    0%,
+    19.999%,
+    22%,
+    62.999%,
+    64%,
+    64.999%,
+    70%,
+    100% {
+        opacity: 0.99;
+        text-shadow: -1px -1px 0 rgb(96, 66, 96), 1px -1px 0 rgb(144, 62, 133), -1px 1px 0 rgba(213, 45, 196, 0.952), 1px 1px 0 rgb(213, 38, 190), 0 -2px 8px, 0 0 2px, 0 0 5px #ff00f2, 0 0 15px #f44, 0 0 2px #892904, 0 2px 3px #000;
+    }
+
+    20%,
+    21.999%,
+    63%,
+    63.999%,
+    65%,
+    69.999% {
+        opacity: 0.4;
+        text-shadow: none;
+    }
+}
+.home{
+    top: 20px;
+    position: relative;
+    max-width: 1250px;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+  }
+  .home .home-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  
+  }
+  .home-container .media-icons{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+  
+  }
+  .home-container .media-icons a{
+    color: var(--second-colour);
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  .home-container .media-icons a:hover{
+    color: var(--hover-colour);
+  }
+  .home-container .info h2{
+    font-size: 4em;
+    color: var(--third-colour);
+    justify-content: center;
+    align-items: center;
+  }
+  .home-container .info h3{
+    color: var(--third-colour);
+    font-feature-settings: 1.3em;
+    font-weight: 600;
+    line-height: 50px;
+  
+  }
+  .home-container .info p{
+    color: var(--third-colour);
+    font-size: var(--normal-font-size);
+    max-width: 350px;
+  
+  }
+  .btn{
+    background: var(--second-colour);
+    color: #fff;
+    font-size: var(--normal-font-size);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 20px;
+    padding: 20px 30px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+  }
+  .bth:hover{
+    background: var(--hover-colour);
+  
+  }
+  .home-container .home-img{
+    position: relative;
+    right: 60px;
+
+  }
+  .home-container .home-img img{
+    width: 90%;
+    transform: translate(0,0);
+  }
