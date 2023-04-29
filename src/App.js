@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { HashRouter as Router, Routes, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './pages';
 import ProjectList from './pages/ProjectList';
 import ProjectDetails from './pages/ProjectDetails';
@@ -13,7 +13,7 @@ import Card from './pages/Card';
   
 function App() {
 return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
     <Navbar/>
     <Routes>
 
