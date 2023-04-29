@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/robotics-nitrr/static/css/main.58cfd12e.css",
-    "main.js": "/robotics-nitrr/static/js/main.5a0944e1.js",
-    "static/js/787.ec704a7a.chunk.js": "/robotics-nitrr/static/js/787.ec704a7a.chunk.js",
-    "static/media/pngegg.jpeg": "/robotics-nitrr/static/media/pngegg.391a2fca39fa36fe953b.jpeg",
-    "static/media/arduino.png": "/robotics-nitrr/static/media/arduino.ba271be794df5f1ee8d4.png",
-    "static/media/favicon.png": "/robotics-nitrr/static/media/favicon.025b530d06673acf7601.png",
-    "static/media/img.jpeg": "/robotics-nitrr/static/media/img.4626f88ed2aede236aa5.jpeg",
-    "static/media/gear.png": "/robotics-nitrr/static/media/gear.19088b55cd0144dc6782.png",
-    "index.html": "/robotics-nitrr/index.html",
-    "main.58cfd12e.css.map": "/robotics-nitrr/static/css/main.58cfd12e.css.map",
-    "main.5a0944e1.js.map": "/robotics-nitrr/static/js/main.5a0944e1.js.map",
-    "787.ec704a7a.chunk.js.map": "/robotics-nitrr/static/js/787.ec704a7a.chunk.js.map"
+    "main.css": "/Robotics-nitrr/static/css/main.58cfd12e.css",
+    "main.js": "/Robotics-nitrr/static/js/main.b0b33ba4.js",
+    "static/js/787.ec704a7a.chunk.js": "/Robotics-nitrr/static/js/787.ec704a7a.chunk.js",
+    "static/media/pngegg.jpeg": "/Robotics-nitrr/static/media/pngegg.391a2fca39fa36fe953b.jpeg",
+    "static/media/arduino.png": "/Robotics-nitrr/static/media/arduino.ba271be794df5f1ee8d4.png",
+    "static/media/favicon.png": "/Robotics-nitrr/static/media/favicon.025b530d06673acf7601.png",
+    "static/media/img.jpeg": "/Robotics-nitrr/static/media/img.4626f88ed2aede236aa5.jpeg",
+    "static/media/gear.png": "/Robotics-nitrr/static/media/gear.19088b55cd0144dc6782.png",
+    "index.html": "/Robotics-nitrr/index.html",
+    "main.58cfd12e.css.map": "/Robotics-nitrr/static/css/main.58cfd12e.css.map",
+    "main.b0b33ba4.js.map": "/Robotics-nitrr/static/js/main.b0b33ba4.js.map",
+    "787.ec704a7a.chunk.js.map": "/Robotics-nitrr/static/js/787.ec704a7a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.58cfd12e.css",
-    "static/js/main.5a0944e1.js"
+    "static/js/main.b0b33ba4.js"
   ]
 }
