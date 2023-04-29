@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/robotics-test/static/css/main.10f5b656.css",
+    "main.js": "/robotics-test/static/js/main.b1559bb0.js",
+    "static/js/787.ec704a7a.chunk.js": "/robotics-test/static/js/787.ec704a7a.chunk.js",
+    "static/media/arduino.png": "/robotics-test/static/media/arduino.ba271be794df5f1ee8d4.png",
+    "static/media/favicon.png": "/robotics-test/static/media/favicon.025b530d06673acf7601.png",
+    "static/media/gear.png": "/robotics-test/static/media/gear.19088b55cd0144dc6782.png",
+    "index.html": "/robotics-test/index.html",
+    "main.10f5b656.css.map": "/robotics-test/static/css/main.10f5b656.css.map",
+    "main.b1559bb0.js.map": "/robotics-test/static/js/main.b1559bb0.js.map",
+    "787.ec704a7a.chunk.js.map": "/robotics-test/static/js/787.ec704a7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10f5b656.css",
+    "static/js/main.b1559bb0.js"
+  ]
+}
